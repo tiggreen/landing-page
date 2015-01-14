@@ -160,4 +160,7 @@ body {
   .cover-container {
     width: 90%;
   }
+  .content {
+      padding: 5%;
+  }
 }
