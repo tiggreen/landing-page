@@ -27,7 +27,7 @@ Typo
 */}
 
 .awesome {
-    padding-bottom: 2%;
+    padding-bottom: 4% !important;
 }
 body {
     font-size: 18px;
