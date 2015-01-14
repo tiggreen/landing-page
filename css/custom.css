@@ -26,12 +26,12 @@ Typo
 /*    background:url(../img/background-image-overlay.png) repeat;
 */}
 
-.awesome {
-    margin-bottom: 4% !important;
+..img-responsive {
+    margin-padding: 2% !important;
 }
 body {
     font-size: 18px;
-    color: #000;
+    color: #737373;
     font-family: 'Open Sans', sans-serif;
     background: transparent;
 
