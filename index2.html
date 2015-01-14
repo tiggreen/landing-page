@@ -31,33 +31,30 @@
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
+        
+              <div class="row">
+                <div class="col-sm-5 col-sm-offset-2 content">
+                <p> 
+                  Feelya helps you to be in a loop with all your friends and
+                  keeps your friendship always plugged in.
+                </p>
+                <form class="form-inline" role="form" id="mc-form">
+                <label class="sr-only" for="inputHelpBlock">Input with help text</label>
+                  <div class="form-group">
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
+                    <input type="email" class="form-control input-lg" id="mc-email" placeholder="What is your email?">
+                  </div>
+                  <button class="btn btn-default btn-lg" type="submit">Sign up</button>
+                  <span id="helpBlock" class="help-block">You will be one of our beta testers, and we promise we'll never spam you.</span>
+                  <label class='mc-label'for="mc-email"></label>
+                </form>
+
+              </div>
+              <div class="col-sm-4">
+              <img src="img/app2.png" class="img-responsive" alt="Responsive image">
+              </div>
             </div>
-          </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
 
         </div>
 
@@ -73,5 +70,16 @@
     <script src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <script src="js/jquery.ajaxchimp.js"></script>
+
+    <script type="text/javascript">
+    $('#mc-form').ajaxChimp({
+      url: '//wheelie.us3.list-manage.com/subscribe/post?u=a18b6a0108993df0bc58f69ca&amp;id=cb1db665b0'
+    });
+    </script>
+    <script type="text/javascript" src="js/global.js"></script>
   </body>
 </html>
