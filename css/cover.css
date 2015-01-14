@@ -29,6 +29,7 @@ a:hover {
 html,
 body {
   height: 100%;
+  position: relative;
   /*background:url(../img/app-bg.png) repeat;*/
 }
 body {
