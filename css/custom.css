@@ -17,8 +17,8 @@ Typo
 }
 .background-image-overlay {
     display:block;
-    position: fixed;
-    top:0;
+/*    position: fixed;
+*/    top:0;
     left:0;
     width:100%;
     height:100%;
@@ -26,9 +26,6 @@ Typo
 /*    background:url(../img/background-image-overlay.png) repeat;
 */}
 
-.img-responsive {
-    padding-bottom: 2% !important;
-}
 body {
     font-size: 18px;
     color: #737373;
