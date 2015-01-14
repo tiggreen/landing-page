@@ -19,7 +19,9 @@ a:hover {
   border: 1px solid #fff;
 }
 
-
+.app-store {
+  vertical-align: middle;
+}
 /*
  * Base structure
  */
