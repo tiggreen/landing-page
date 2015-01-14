@@ -26,6 +26,9 @@ Typo
 /*    background:url(../img/background-image-overlay.png) repeat;
 */}
 
+.awesome {
+    padding: 5%;
+}
 body {
     font-size: 18px;
     color: #fff;
