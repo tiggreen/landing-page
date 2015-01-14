@@ -31,7 +31,7 @@ Typo
 }
 body {
     font-size: 18px;
-    color: #fff;
+    color: #000;
     font-family: 'Open Sans', sans-serif;
     background: transparent;
 
@@ -75,7 +75,7 @@ Mailchimp form
 .error {
     font-weight: 400;
     font-size: 0.8em;
-    color: red;
+    color:red;
 }
 .valid {
     font-weight: 400;
@@ -102,7 +102,6 @@ Responsive variables
 
 
 }
-
 
 @media(max-width:767px) {
     body {
