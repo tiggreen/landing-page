@@ -9,8 +9,8 @@ Typo
 */
 
 .fullbackground {
-    background: url('../img/7147004955_364603938f_o.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
+/*    background: url('../img/7147004955_364603938f_o.jpg') no-repeat center center fixed;
+*/    -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
