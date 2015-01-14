@@ -32,7 +32,7 @@ Typo
 
 body {
     font-size: 18px;
-    color: #737373;
+    color: white;
     font-family: 'Open Sans', sans-serif;
     background: transparent;
 
@@ -58,7 +58,7 @@ p {
 .help-block {
 display: block;
 margin-bottom: 5px;
-color: #424141;
+color: white;
 font-size: 13px !important;
 }
 
