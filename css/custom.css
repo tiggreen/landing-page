@@ -26,8 +26,8 @@ Typo
 /*    background:url(../img/background-image-overlay.png) repeat;
 */}
 
-..img-responsive {
-    margin-padding: 2% !important;
+.img-responsive {
+    padding-bottom: 2% !important;
 }
 body {
     font-size: 18px;
