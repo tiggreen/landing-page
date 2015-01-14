@@ -44,8 +44,7 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  /*position: relative;*/
-  position: absolute;
+  position: relative;
 
 }
 .site-wrapper-inner {
@@ -56,6 +55,7 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+  position: absolute;
 }
 
 /* Padding for spacing */
