@@ -156,3 +156,34 @@
   0%, 55% { opacity: 0 }
   75%, 100% { opacity: 1 }
 }
+
+#input {
+display:inline-block;
+position:relative;
+float:left;
+}
+
+.bottom {
+position:absolute;
+bottom:5px;
+width: 100%;
+}
+
+.label {
+width: 30px;
+position: relative;
+left: 15px;
+top:5px;
+color: #fefefe;
+float:left;
+}
+
+.console {
+position:absolute;
+bottom:32px;
+overflow:hidden;
+}
+
+.white{
+color: #fefefe;
+}
