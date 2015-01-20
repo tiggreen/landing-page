@@ -132,7 +132,7 @@
         }
         style = typeof style !== 'undefined' ? style : 'line';
         color = typeof color !== 'undefined' ? color : 'white';
-        $('.console').append('<div class="'+style+' '+color+'">'+input+ ": "+ desc + '</div>');
+        $('.console').append('<div class="'+style+' '+color+'">'+input+ " "+ desc + '</div>');
     }
 
     function execCommand(command){
@@ -145,7 +145,7 @@
 
     var commands = {
       help: function (){
-        addLine("Available command list:");
+        addLine("Available commands:");
         addLine("ls",  "List all your friends.", 'margin');
         addLine("send", "Text your friend.", 'margin');
         addLine("profile", "Display a profile.", 'margin');
