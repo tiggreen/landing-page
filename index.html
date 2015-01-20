@@ -119,13 +119,13 @@
       }
     }, 100);
 
-    function addLine(input, style, color) {
+    function addLine(input, desc, style, color) {
         if($('.console div').length==lineLimit) {
           $('.console div').eq(0).remove();
         }
         style = typeof style !== 'undefined' ? style : 'line';
         color = typeof color !== 'undefined' ? color : 'white';
-        $('.console').append('<div class="'+style+' '+color+'">'+input+'</div>');
+        $('.console').append('<div class="'+style+' '+color+'">'+input+ ": "+ desc + '</div>');
     }
 
     function execCommand(command){
@@ -139,25 +139,27 @@
     var commands = {
       help: function (){
         addLine("Available command list:");
-        addLine("dir", 'margin');
-        addLine("help", 'margin');
-        addLine("ps", 'margin');
+        addLine("ls",  "List all your friends.", 'margin');
+        addLine("send", "Text your friend.", 'margin');
+        addLine("profile", "Display your friend profile.", 'margin');
       },
-      dir: function(){
-        addLine(".");
-        addLine("..");
-        addLine("Applications", 'margin', 'blue');
-        addLine("Documents", 'margin', 'blue');
-        addLine("Downloads", 'margin', 'blue');
-        addLine("Movies", 'margin', 'blue');
-        addLine("Music", 'margin', 'blue');
-        addLine("System", 'margin', 'blue');    
+      ls: function(){
+      addLine("Available command list:");
+      addLine("ls",  "List all your friends.", 'margin');
+      addLine("send", "Text your friend.", 'margin');
+      addLine("profile", "Display your friend profile.", 'margin'); 
       },
-      ps: function() {
-        addLine("Running processes:");
-        addLine("name: browser pid:8876", 'margin');
-        addLine("name: movie player pid:3213", 'margin');
-        addLine("name: system pid:0012", 'margin');
+      send: function() {
+        addLine("Available command list:");
+        addLine("ls",  "List all your friends.", 'margin');
+        addLine("send", "Text your friend.", 'margin');
+        addLine("profile", "Display your friend profile.", 'margin');
+      },
+      profile: function() {
+        addLine("Available command list:");
+        addLine("ls",  "List all your friends.", 'margin');
+        addLine("send", "Text your friend.", 'margin');
+        addLine("profile", "Display your friend profile.", 'margin');
       }
     }
     </script>
