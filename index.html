@@ -124,9 +124,7 @@
       var sum = 0;
       $('.console div').each( function(){ sum += $(this).height(); });
 
-      console.log(sum);
-
-        if($('.console div').length==lineLimit) {
+        if($('#screen').height()  + 15 >= sum) {
           $('.console div').eq(0).remove();
         }
         style = typeof style !== 'undefined' ? style : 'line';
