@@ -196,3 +196,11 @@ color: #81bbd5;
 margin-left: 15px;
 margin-bottom:2px;
 }
+
+.container {
+margin: 50px auto;
+height: 600px;
+width: 950px;
+position:relative;
+border:1px solid #fefefe;
+}
