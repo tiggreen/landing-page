@@ -60,8 +60,8 @@
                   <div class="speaker"></div>
                   <div class="screen" id="screen">
 <!--                     <div class="cont"> -->
-                      <div class="console">
-                      </div>
+<!--                       <div class="console">
+                      </div> -->
                       <div class="bottom">
                         <div class="label">></div>
                         <div id="input"></div>
@@ -103,7 +103,7 @@
 
     // Termianl 
     $('#input').cssConsole({
-      inputName:'console',
+      inputName:'screen',
       charLimit: 30,
       onEnter: function(){
         addLine("> "+$('#input').find('input').val());
@@ -122,12 +122,12 @@
     }, 100);
 
     function addLine(input, style, color) {
-        if($('.console div').length==lineLimit) {
-          $('.console div').eq(0).remove();
+        if($('.screen div').length==lineLimit) {
+          $('.screen div').eq(0).remove();
         }
         style = typeof style !== 'undefined' ? style : 'line';
         color = typeof color !== 'undefined' ? color : 'white';
-        $('.console').append('<div class="'+style+' '+color+'">'+input+'</div>');
+        $('.screen').append('<div class="'+style+' '+color+'">'+input+'</div>');
     }
 
     function execCommand(command){
