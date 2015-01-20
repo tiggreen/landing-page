@@ -132,14 +132,14 @@
         }
         style = typeof style !== 'undefined' ? style : 'line';
         color = typeof color !== 'undefined' ? color : 'white';
-        $('.console').append('<div class="'+style+' '+color+'">'+input+ ":"+ desc + '</div>');
+        $('.console').append('<div class="'+style+' '+color+'">'+input+ " "+ desc + '</div>');
     }
 
     function execCommand(command){
         if ( commands[command] ) {
           return commands[command]();
         } else {
-          addLine(command + ": command not found.");
+          addLine(command + ": command not found.", " ");
         }   
     }
 
