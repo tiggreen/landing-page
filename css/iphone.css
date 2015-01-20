@@ -203,9 +203,8 @@ margin-bottom:2px;
 }
 
 .cont {
-margin: 50px auto;
-height: 600px;
-/*width: 950px;*/
+/*margin: 50px auto;*/
+height: 400px;
 position:relative;
 border:1px solid #fefefe;
 }
