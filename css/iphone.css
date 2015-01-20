@@ -107,6 +107,7 @@
   background: black;
   width: 90%;
   height: 75%;
+  overflow:hidden;
 /*  position: absolute;
 */  top: 12.5%;
   left: 5%;
