@@ -169,7 +169,7 @@ overflow:hidden;
 
 .white{
 color: #5D645B;
-font-size: 5px;
+font-size: 12px;
 font-family: 'Open Sans', sans-serif;
 }
 
@@ -177,11 +177,11 @@ font-family: 'Open Sans', sans-serif;
 color: #81bbd5;
 }
 
-/*.line {
-margin-left: 15px;
+.line {
+margin-left: 6px;
 margin-bottom:2px;
 }
-*/
+
 .margin {
 margin-left: 40px;
 margin-bottom:2px;
