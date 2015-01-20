@@ -160,9 +160,10 @@ margin-left: 6px;
 margin-bottom:2px;
 font-size: 11px;
 font-family: courier;
+float: left;
 }
 
-.margin {
+/*.margin {
 margin-left: 40px;
 margin-bottom:2px;
-}
+}*/
