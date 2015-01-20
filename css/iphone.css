@@ -178,11 +178,11 @@ color: #fefefe;
 float:left;
 }
 
-/*.console {
+.console {
 position:absolute;
 bottom:32px;
 overflow:hidden;
-}*/
+}
 
 .white{
 color: #fefefe;
@@ -197,7 +197,7 @@ margin-left: 15px;
 margin-bottom:2px;
 }
 
-/*.margin {
+.margin {
 margin-left: 40px;
 margin-bottom:2px;
-}*/
+}
