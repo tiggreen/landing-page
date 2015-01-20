@@ -104,7 +104,7 @@
 }
 
 .screen {
-  /*background: #2f2f2f;*/
+  background: black;
   width: 90%;
   height: 75%;
   position: absolute;
