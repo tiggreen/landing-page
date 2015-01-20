@@ -126,8 +126,8 @@
 
         console.log($('#screen').height());
         console.log(sum)
-        
-        if($('#screen').height()  + 15 >= sum) {
+
+        if(sum + 15 > $('#screen').height()) {
           $('.console div').eq(0).remove();
         }
         style = typeof style !== 'undefined' ? style : 'line';
