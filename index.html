@@ -124,6 +124,9 @@
       var sum = 0;
       $('.console div').each( function(){ sum += $(this).height(); });
 
+        console.log($('#screen').height());
+        console.log(sum)
+        
         if($('#screen').height()  + 15 >= sum) {
           $('.console div').eq(0).remove();
         }
