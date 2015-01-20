@@ -60,14 +60,23 @@
                   <div class="camera"></div>
                   <div class="speaker"></div>
                   <div class="screen" id="screen">
+                    <div class="container">
+                      <div class="console">
+                        <div class="line white">Welcome to cssConsole! Type help for command list.</div>
+                      </div>
+                      <div class="bottom">
+                        <div class="label">></div>
+                        <div id="input"></div>
+                      </div>
+                    </div> 
                     <!-- Put screen stuff in here -->
-                    <div class="appleicon">
+<!--                     <div class="appleicon">
                       <img src="http://goo.gl/4xuZUj" />
                     </div>
                     <div class="text">
                       Hello
                       This is a free template! Have fun!
-                    </div>
+                    </div> -->
                   </div>
                   <div class="button">
                     <div class="square"></div>
@@ -98,13 +107,75 @@
     <script src="js/cssConsole.min.js"></script>
 
     <script type="text/javascript">
-    $('#screen').cssConsole(
-      charLimit: 20,
-      preventEnter: false
-    );
+    // $('#screen').cssConsole(
+    //   charLimit: 20,
+    //   preventEnter: false
+    // );
     $('#mc-form').ajaxChimp({
       url: '//wheelie.us3.list-manage.com/subscribe/post?u=a18b6a0108993df0bc58f69ca&amp;id=cb1db665b0'
     });
+
+    // Termianl 
+    $('#input').cssConsole({
+      inputName:'console',
+      charLimit: 60,
+      onEnter: function(){
+        addLine("> "+$('#input').find('input').val());
+        execCommand($('#input').find('input').val());
+        $('#input').cssConsole('reset');  
+      }
+    });
+
+    var lineLimit = 28;
+    var focus;
+
+    focus = window.setInterval(function() {
+      if(!$('#input').find('input').is(":focus")){
+        $('#input').find('input').focus();
+      }
+    }, 100);
+
+    function addLine(input, style, color) {
+        if($('.console div').length==lineLimit) {
+          $('.console div').eq(0).remove();
+        }
+        style = typeof style !== 'undefined' ? style : 'line';
+        color = typeof color !== 'undefined' ? color : 'white';
+        $('.console').append('<div class="'+style+' '+color+'">'+input+'</div>');
+    }
+
+    function execCommand(command){
+        if ( commands[command] ) {
+          return commands[command]();
+        } else {
+          addLine("Command '" + command + "' was not found.");
+        }   
+    }
+
+    var commands = {
+      help: function (){
+        addLine("Available command list:");
+        addLine("dir", 'margin');
+        addLine("help", 'margin');
+        addLine("ps", 'margin');
+      },
+      dir: function(){
+        addLine(".");
+        addLine("..");
+        addLine("Applications", 'margin', 'blue');
+        addLine("Documents", 'margin', 'blue');
+        addLine("Downloads", 'margin', 'blue');
+        addLine("Movies", 'margin', 'blue');
+        addLine("Music", 'margin', 'blue');
+        addLine("System", 'margin', 'blue');    
+      },
+      ps: function() {
+        addLine("Running processes:");
+        addLine("name: browser pid:8876", 'margin');
+        addLine("name: movie player pid:3213", 'margin');
+        addLine("name: system pid:0012", 'margin');
+      }
+    }
     </script>
   </body>
 </html>
