@@ -107,8 +107,7 @@
   background: black;
   width: 90%;
   height: 75%;
-/*  position: absolute;*/
-  position:relative;
+  position: absolute;
   top: 12.5%;
   left: 5%;
   animation: lighten 5s infinite alternate;
@@ -179,11 +178,11 @@ color: #fefefe;
 float:left;
 }
 
-.console {
+/*.console {
 position:absolute;
 bottom:32px;
 overflow:hidden;
-}
+}*/
 
 .white{
 color: #fefefe;
@@ -198,14 +197,7 @@ margin-left: 15px;
 margin-bottom:2px;
 }
 
-.margin {
+/*.margin {
 margin-left: 40px;
 margin-bottom:2px;
-}
-
-.cont {
-margin: 50px auto;
-height: 400px;
-position:relative;
-border:1px solid #fefefe;
-}
+}*/
