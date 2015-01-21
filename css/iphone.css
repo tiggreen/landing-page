@@ -132,7 +132,7 @@ right: 0;
 position:absolute;
 bottom:5px;
 width: 100%;
-overflow: scroll;
+overflow: hidden;
 }
 
 .label {
