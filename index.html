@@ -165,16 +165,20 @@
       inputName:'console',
       charLimit: 30,
       onEnter: function(){
-         addLine("> "+$('#input').find('input').val());
-        execCommand($('#input').find('input').val());
-        $('#input').cssConsole('reset');  
+        var inp = $('#input').find('input').val().trim();
+
+        if (inp.length != 0) {
+          addLine("> " + inp, "");
+          execCommand(inp); 
+        }
+        $('#input').cssConsole('reset'); 
       }
     });
 
     var lineLimit = 15;
     var focus;
     // $('#input').find('input').focus();
-    
+
     focus = window.setInterval(function() {
       if(!$('#input').find('input').is(":focus")){
         $('#input').find('input').focus();
