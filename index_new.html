@@ -26,6 +26,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/cssConsole.css" type="text/css" rel="stylesheet">
+    <link href="css/iphone.css" type="text/css" rel="stylesheet">
   </head>
 
   <body>
@@ -35,20 +37,60 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+       
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
     <div class="container marketing">
 
-      <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-         
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-6">
+        <p> 
+          <b>Plugged</b> helps you to be in a loop with all your friends and
+          keeps your friendship always plugged in.
+        </p>
+        <form class="form-inline" role="form" id="mc-form">
+        <label class="sr-only" for="inputHelpBlock">Input with help text</label>
+          <div class="form-group">
 
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
+            <input type="email" class="form-control input-lg" id="mc-email" placeholder="What is your email?">
+          </div>
+          <button class="btn btn-default btn-lg" type="submit">Sign up</button>
+          <span id="helpBlock" class="help-block">You will be one of our beta testers, and we promise we'll never spam you.</span>
+          <label class='mc-label'for="mc-email"></label>
+        </form>
+      </div>
+      <div class="col-lg-6">
+        <div class="iphone">
+          <div class="power"></div>
+          <div class="lock"></div>
+          <div class="volume up"></div>
+          <div class="volume down"></div>
+          <div class="camera"></div>
+          <div class="speaker"></div>
+          <div class="screen" id="screen">
+              <div class="console">
+              </div>
+              <div class="bottom">
+                <div class="label">></div>
+                <div id="input"></div>
+              </div>
+           </div>
+          <div class="button">
+            <div class="square"></div>
+          </div>
+      </div>
+      <!-- <img src="img/app.png" class="img-responsive" alt="Responsive image"> -->
+      </div>
+    </div>
 
       <!-- START THE FEATURETTES -->
 
@@ -110,5 +152,77 @@
     <script src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.ajaxchimp.js"></script>
+
+    <script src="js/cssConsole.min.js"></script>
+
+    <script type="text/javascript">
+
+    $('#mc-form').ajaxChimp({
+      url: '//wheelie.us3.list-manage.com/subscribe/post?u=a18b6a0108993df0bc58f69ca&amp;id=cb1db665b0'
+    });
+
+    // Termianl 
+    $('#input').cssConsole({
+      inputName:'console',
+      charLimit: 30,
+      onEnter: function(){
+         addLine("> "+$('#input').find('input').val());
+        execCommand($('#input').find('input').val());
+        $('#input').cssConsole('reset');  
+      }
+    });
+
+    var lineLimit = 15;
+    var focus;
+
+    focus = window.setInterval(function() {
+      if(!$('#input').find('input').is(":focus")){
+        $('#input').find('input').focus();
+      }
+    }, 100);
+
+    function addLine(input, desc, style, color) {
+      // if sum of all div heights in the .console div
+      var sum = 0;
+      $('.console div').each( function(){ sum += $(this).height(); });
+
+        console.log("Screen = " + $('#screen').height());
+        console.log("Sum = " + sum);
+
+        if(sum + 100  > $('#screen').height()) {
+          $('.console div').eq(0).remove();
+        }
+        style = typeof style !== 'undefined' ? style : 'line';
+        color = typeof color !== 'undefined' ? color : 'white';
+        $('.console').append('<div class="'+style+' '+color+'">'+input+ " "+ desc + '</div>');
+    }
+
+    function execCommand(command){
+        if ( commands[command] ) {
+          return commands[command]();
+        } else {
+          addLine(command + ": command not found.", " ");
+        }   
+    }
+
+    var commands = {
+      help: function (){
+        addLine("Available commands:", "");
+        addLine("ls",  "List all your friends.", 'margin');
+        addLine("send", "Text your friend.", 'margin');
+        addLine("profile", "Display a profile.", 'margin');
+      },
+      ls: function(){
+      addLine("Shows all your friends.", "");
+      },
+      send: function() {
+        addLine("Text your friend.", "");
+      },
+      profile: function() {
+        addLine("Show a profile.", "");
+      }
+    }
+    </script>
   </body>
 </html>
