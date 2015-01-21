@@ -185,7 +185,7 @@ font-size: 13px !important;
 
 /* Center align the text within the three columns below the carousel */
 .marketing {
-  margin: 5%;
+  margin-top: 10%;
 }
 .marketing .col-lg-4 {
   margin-bottom: 20px;
