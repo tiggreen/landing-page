@@ -123,11 +123,8 @@
 
 #input {
 display:inline-block;
-/*position:relative;
-*/float:left;
-
-width: 100%;
-position: absolute;
+position:relative;
+float:left;
 right: 0;
 }
 
@@ -135,10 +132,7 @@ right: 0;
 position:absolute;
 bottom:5px;
 width: 100%;
-
-overflow: hidden;
-/*position: relative;*/
-
+overflow: scroll;
 }
 
 .label {
