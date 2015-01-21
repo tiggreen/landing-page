@@ -25,7 +25,7 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .marketing {
-  margin-top: 7%;
+  margin-top: 5%;
 }
 .marketing .col-lg-4 {
   margin-bottom: 20px;
@@ -40,7 +40,7 @@ body {
 }
 .subscribe-form {
   margin-top: 7%;
-  padding-left: 12%;
+  padding-left: 6%;
   text-align: right;
 }
 
