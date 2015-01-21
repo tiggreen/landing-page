@@ -123,14 +123,22 @@
 
 #input {
 display:inline-block;
-position:relative;
-float:left;
+/*position:relative;
+*/float:left;
+
+width: 100%;
+position: absolute;
+right: 0;
 }
 
 .bottom {
 position:absolute;
 bottom:5px;
 width: 100%;
+
+overflow: hidden;
+/*position: relative;*/
+
 }
 
 .label {
