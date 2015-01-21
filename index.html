@@ -104,7 +104,7 @@
       inputName:'console',
       charLimit: 30,
       onEnter: function(){
-        // addLine("> "+$('#input').find('input').val());
+         addLine("> "+$('#input').find('input').val());
         execCommand($('#input').find('input').val());
         $('#input').cssConsole('reset');  
       }
