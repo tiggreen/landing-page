@@ -31,7 +31,7 @@ body {
   height: 100%;
 }
 body {
-  color: #fff;
+  color: black;
   text-align: center;
   font-size: 18px;
 }
@@ -45,7 +45,7 @@ body {
 
 }
 .background-image-overlay {
-  background-image:url("../img/stardust.png");
+  background-image:url("../img/crossword.png");
   background-size: cover;
   background-repeat:no-repeat;
 }
