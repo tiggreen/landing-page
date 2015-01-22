@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>Plugged App.</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -51,9 +51,8 @@
 
       <div class="row">
         <div class="col-lg-6 subscribe-form">
-        <p class="lead"> 
-          <b>Plugged</b> helps you to be in a loop with all your friends and
-          keeps your friendship always plugged in.
+        <p class="lead lead-big"> 
+          Plugged is a <span class="text-terminal">terminal</span> like messenger that helps you to be in a loop with all your friends.
         </p>
         <form class="form-inline" role="form" id="mc-form">
         <label class="sr-only" for="inputHelpBlock">Input with help text</label>
@@ -96,11 +95,11 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Extremely simple User Interface. It'll blow your mind.</h2>
+          <p class="lead-big">You can again get back to your conversations and never get distracted by fancy features you don't really care about. Plugged is all focusing on your conversations.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="img/smiley48.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive" src="img/hand27.png" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -108,11 +107,12 @@
 
       <div class="row featurette">
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="img/add199.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive" src="img/thought.png" alt="Generic placeholder image">
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">The "Hello World" messaging app for computer geeks.
+          </h2>
+          <p class="lead-big">We know you love the Linux or Mac terminal and we know why. It seems that everything is in your hands and accessible within a second. We give you this incredible experience on your smartphones while you chat with your friends.</p>
         </div>
       </div>
 
@@ -120,8 +120,9 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Messaging never been this fun!</h2>
+          <p class="lead-big">Plugged keeps you and your friends always entertained. How?
+          We combine and provide simple statistics based on your chat history. You can also track your type speed and compete with your friends.</p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="img/rock3.png" alt="Generic placeholder image">
@@ -135,8 +136,8 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2015 Plugged.</p>
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>         is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
       </footer>
 
     </div><!-- /.container -->
@@ -164,11 +165,11 @@
     $('#input').cssConsole({
       inputName:'console',
       charLimit: 30,
+      inputValue: 'type help...',
       onEnter: function(){
         var inp = $('#input').find('input').val().trim();
 
         if (inp.length != 0) {
-          addLine("> " + inp, "");
           execCommand(inp); 
         }
         $('#input').cssConsole('reset'); 
@@ -176,16 +177,10 @@
     });
 
     var lineLimit = 15;
-    var focus;
-    // $('#input').find('input').focus();
 
-    focus = window.setInterval(function() {
-      if(!$('#input').find('input').is(":focus")){
-        $('#input').find('input').focus();
-      }
-    }, 100);
+    $('#input').find('input').focus();
 
-    function addLine(input, desc, style, color) {
+    function addLine(input, style, color) {
       // if sum of all div heights in the .console div
       var sum = 0;
       $('.console div').each( function(){ sum += $(this).height(); });
@@ -198,32 +193,32 @@
         }
         style = typeof style !== 'undefined' ? style : 'line';
         color = typeof color !== 'undefined' ? color : 'white';
-        $('.console').append('<div class="'+style+' '+color+'">'+input+ " "+ desc + '</div>');
+        $('.console').append('<div class="'+style+' '+color+'">'+input+'</div>');
     }
 
     function execCommand(command){
         if ( commands[command] ) {
           return commands[command]();
         } else {
-          addLine(command + ": command not found.", " ");
+          addLine(command + ": command not found.");
         }   
     }
 
     var commands = {
       help: function (){
-        addLine("Available commands:", "");
-        addLine("ls",  "List all your friends.", 'margin');
-        addLine("send", "Text your friend.", 'margin');
-        addLine("profile", "Display a profile.", 'margin');
+        addLine("Available commands:", 'margin-light');
+        addLine("ls: List all your friends.", 'margin-light');
+        addLine("send: Text your friend.", 'margin-light');
+        addLine("profile: See a friend profile.", 'margin-light');
       },
       ls: function(){
-      addLine("Shows all your friends.", "");
+      addLine("Tigran, Rob, John, Karen", 'margin-light-1');
       },
       send: function() {
-        addLine("Text your friend.", "");
+        addLine("Message was successfully sent.", 'margin-light-2');
       },
       profile: function() {
-        addLine("Show a profile.", "");
+        addLine("Here is your friend profile.", 'margin-light-3');
       }
     }
     </script>

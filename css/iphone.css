@@ -171,3 +171,29 @@ margin-left: 5px;
 margin-bottom:2px;
 float: left;
 }
+
+.margin-light {
+margin-left: 5px;
+margin-bottom:2px;
+float: left;
+color: #B5B5B5;
+}
+
+.margin-light-1 {
+margin-left: 5px;
+margin-bottom:2px;
+float: left;
+color: white;
+}
+.margin-light-2 {
+margin-left: 5px;
+margin-bottom:2px;
+float: left;
+color: #13F2E3;
+}
+.margin-light-3 {
+margin-left: 5px;
+margin-bottom:2px;
+float: left;
+color: #EAFF00;
+}

@@ -1,10 +1,13 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic);
+
 
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+  font-family: 'Lato', sans-serif;
 }
 
 
@@ -32,7 +35,7 @@ body {
   text-align: center;
 }
 .marketing h2 {
-  font-weight: normal;
+  font-weight: 400;
 }
 .marketing .col-lg-4 p {
   margin-right: 10px;
@@ -40,10 +43,17 @@ body {
 }
 .subscribe-form {
   margin-top: 7%;
-  padding-left: 6%;
-  text-align: right;
+  padding-left: 2%;
+  text-align: left;
 }
-
+.lead-big {
+  font-size: 30px;
+  font-weight: 300;
+}
+.text-terminal {
+  font-family: courier;
+  color: #21f838;
+}
 
 /* Featurettes
 ------------------------- */
